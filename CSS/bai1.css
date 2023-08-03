@@ -1,0 +1,15 @@
+table
+{
+    border:1px black solid;
+    width:500px;
+}
+
+td{
+    border: 1px black solid;
+}
+
+table tr td:first-child
+{
+    width:30%;
+}
+

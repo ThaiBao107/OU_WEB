@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>    
+    <link rel="stylesheet" href="CSS/bai1.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <script>
+        function Tinhtuoi(){
+            var nam = document.getElementById("txt").value;
+            var year = document.getElementById("year").value;   
+            var date = new Date();
+            /* Kiem tra du lieu*/
+            if(nam == "")
+            {
+                alert("Chua co gia tri");
+                return flase;
+            }
+            if(isNaN((year))){
+                alert("Chua co gia tri so");
+                return flase;
+            }
+            document.getElementById("show").innerHTML = "Chao ban, " + nam + " !" + "<br>" + "Tuoi cua ban la: " + (date.getFullYear() - year);
+        }
+    </script>
+</head>
+<body>
+    <h1>CHƯƠNG TRÌNH TÍNH TUỔI</h1>
+    <br>
+    <table>
+        <tr>
+            <td> Nhập vào tên bạn: </td> <td> <input type="text" id="txt"> </td>
+        </tr>
+        <tr>
+            <td>Nhập vào năm sinh: </td>  <td> <input type="text" id="year"></td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="Tinhtuoi()" >Tinh tuoi</button>
+    <span id="show"></span>
+</body>
+</html>
