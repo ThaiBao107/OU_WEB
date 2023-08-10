@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 6</title>
+    <script src="JS/js6.js"></script>
+</head>
+<style>
+    table caption{
+        text-align: center;
+        font-weight: bold;
+    }
+    table{
+        border: 1px black solid;
+        border-collapse: collapse;
+    }
+    table tr td{
+        border: 1px black solid;
+    }
+</style>
+<body>
+    <form id="myForm" onsubmit="return Dangki()">
+     <table >
+         <caption>DANG KI THANH VIEN</caption>
+         <tr>
+             <td>Ten dang nhap: </td>
+             <td><input type="text" name="txtTen" required></td>
+         </tr>
+         <tr>
+             <td>Mat khau: </td>
+             <td><input type="password" name="txtMK" required></td>
+         </tr>
+         <tr>
+             <td>Ngay sinh: </td>
+             <td><input type="date" name="txtNam" required></td>
+         </tr>
+         <tr>
+             <td>Gioi tinh: </td>
+             <td>
+                 <input type="checkbox" name="txtBox" checked> <label>Nam</label>
+                 <input type="checkbox" name="txtBox"> <label>Nu</label>
+             </td>
+         </tr>
+         <tr>
+             <td>Van de can quan tam: </td>
+             <td>
+                <select name="choose">
+                    <option value="kinh te">Kinh te</option>
+                    <option value="van hoc">Van hoc</option>
+                    <option value="kinh te chinh tri">KTCT</option>
+                </select>
+             </td>
+         </tr>
+         <tr>
+             <td><input type="submit" value="Dang ki"></td>
+             <td><input type="reset" value="Huy"></td>
+         </tr>
+         <tr>
+             <td colspan="2"> <textarea cols="70" rows="10" name="text"> </textarea> </td>
+         </tr>
+     </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS09</title>
+    <style>
+        header
+        {
+            display:flex;
+            flex-direction: column;
+            padding:10px;
+            background-color: black;
+            color:white;
+            font-family:'Courier New', Courier, monospace;
+        }
+        div{
+            margin:5px;
+        }
+        button{
+            background-color:cornflowerblue;
+            border: 1px solid white;
+            padding:5px;
+            border-radius:5px;
+        }
+        button:hover
+        {
+            background-color:rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <div>
+        Nhap so phan tu <input id="amount">
+    </div>
+    <div>
+        <button onclick="createArray()">Tạo mảng</button>
+        <button onclick="sortHigh()">Xăp xếp mảng tăng</button>
+        <button onclick="sortLow()">Xăp xếp mảng giảm</button>
+    </div>
+  </header>
+  <sectrion>
+      <p id="show1"></p>
+      <p id="show2"></p>
+      <p id="show3"></p>
+  </sectrion>
+  <script>
+       var array = [];
+      function createArray()
+      {
+          var num = document.getElementById("amount").value;
+          if(isNaN(num) || num == "")
+          {
+              alert("!! Ban nhap sai kieu du lieu");
+              return;
+          }
+           array = [];//reset
+          for(var i = 0; i < num; i++)
+          {
+              array[i] = Math.floor(Math.random() *50);
+          }
+          var result = array.join(" ");
+          document.getElementById("show1").innerHTML = "Mảng ban đầu: " + result;
+      }
+      function sortHigh()
+      {
+          array.sort(function(a,b)
+          {
+              return a-b;
+          });
+          var result = array.join(" ");
+          document.getElementById("show2").innerHTML = "Mảng tăng dần: " + result;
+      }
+      function sortLow()
+      {
+          array.sort(function(a,b)
+          {
+              return b-a;
+          });
+          var result = array.join(" ");
+          document.getElementById("show3").innerHTML = "Mảng gỉam dần: " + result;
+      }
+  </script>
+</body>
+</html>

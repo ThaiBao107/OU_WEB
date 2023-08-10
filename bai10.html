@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 10</title>
+    <style>
+        .container .item{
+            width:500px;
+            height: 100px;
+            background-color: brown;
+            line-height: 100px;
+            text-align: center;
+            font-weight: bold;
+            color: azure;
+        }
+
+    </style>
+    <script>
+        function init()
+        {
+        var content = document.getElementById("text").value;
+        var mauNen = document.getElementById("txtNen").value;
+        var mauChu = document.getElementById("txtChu").value;
+        var change =  document.querySelector(".item");
+        var change_chu = document.querySelector(".item span")
+        console.log(change);
+        change.style.backgroundColor = mauNen;
+        change_chu.style.color = mauChu;
+        change_chu.innerHTML = content;
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div class="container">
+        <div class="item">
+            <span>WELCOME HTML5!</span>
+        </div>
+        <div class="items">
+            <table>
+                <tr>
+                    <td>Nhap noi dung: </td>
+                    <td><input type="text" id="text"></td>
+                </tr>
+                <tr>
+                    <td>Mau nen: </td>
+                    <td><input type="color" id="txtNen"></td>
+                </tr>
+                <tr>
+                    <td>Mau chu: </td>
+                    <td> <input type="color" id="txtChu"></td>
+                </tr>
+                 <tr>
+                     <td rowspan="2"><button type="button" onclick="init()" > thuc hien</button></td>
+                 </tr>   
+            </table>
+        </div>
+    </div>
+</body>
+</html>

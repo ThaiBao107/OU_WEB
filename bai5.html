@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5</title>
+</head>
+<body>
+    <h1>BANG CUU CHUONG</h1>
+    <script>
+        document.write("<table>");
+       
+            document.write("<tr>");
+            for(var k = 2;k<=9;k++)
+            {
+                if(k == 6)
+                {
+                    document.write("</tr>");
+                    document.write("<tr>");
+                }
+                document.write("<td>");
+            for(var j=2;j <= 9;j++)
+            {
+                document.write(k + " x " + j + " = " + (k*j) + "<br>");
+            }
+            document.write("</td>");
+            }
+        document.write("</tr>");
+        document.write("</table>");
+    </script>
+</body>
+</html>
